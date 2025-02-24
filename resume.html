@@ -1,140 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8" >
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
     <link
       rel="stylesheet"
       href="https://unicons.iconscout.com/release/v3.0.6/css/line.css"
     />
     <title>Responsive Portfolio Webite</title>
     <link rel="stylesheet" href="css/styles2.css" />
+    <!-- === SWIPER CSS ====-->
+  <link rel="stylesheet" href="css/swiper-bundle.min.css"/>
   </head>
- 
+
   <body>
     <!--========== header ========-->
-    <header class="header" id="header">
+    <header class="header scroll-header" id="header">
       <nav class="nav container">
         <a href="#" class="nav__logo">Raghad</a>
 
         <div class="nav__menu" id="nav-menu">
-          <ul class="nan__list grid">
+          <ul class="nav__list grid">
             <li class="nav__item">
               <a href="#home" class="nav__link">
-                <img src="img/home.icon.png" class="icon" /> Home
+                <ion-icon name="home-outline" class="nav__icon active-link"></ion-icon> Home
               </a>
             </li>
             <li class="nav__item">
               <a href="#about" class="nav__link">
-                <img src="img/user.png" class="icon" />
+                <ion-icon name="person-circle-outline" class="nav__icon"></ion-icon>
                 About
               </a>
             </li>
             <li class="nav__item">
               <a href="#skills" class="nav__link">
-                <img src="img/file.png" class="icon" /> Skills
+                <ion-icon name="brush-outline" class="nav__icon"></ion-icon> Skills
               </a>
             </li>
             <li class="nav__item">
               <a href="#services" class="nav__link">
-                <img src="img/briefcase.png" class="icon" /> Services
+                <ion-icon name="document-text-outline" class="nav__icon"></ion-icon>Services
               </a>
             </li>
             <li class="nav__item">
-              <a href="#Portfolio" class="nav__link"
-                ><img src="img/scenery.png" class="icon" />
+              <a href="#portfolio" class="nav__link"
+                ><ion-icon name="briefcase-outline" class="nav__icon"></ion-icon>
                 Portfolio
               </a>
             </li>
             <li class="nav__item">
               <a href="#contact" class="nav__link">
-                <img src="img/message.png" class="icon" />
+                <ion-icon name="chatbubble-outline" class="nav__icon"></ion-icon>
                 Contact me</a
               >
             </li>
           </ul>
-          <img src="img/crosses.png" class="icon" id="nav-close" />
+          <ion-icon name="close-circle-outline" class="nav__close" id="nav-close"></ion-icon>
+        
         </div>
         <div class="nav__btns">
+<!-- theme change button -->
+          <ion-icon name="sunny-outline" class="moon-outline change-theme" id="theme-button"></ion-icon>
+
           <div class="nav__toggle" id="nav-toggle">
-            <img src="img/apps.png" class="icon" />
+            <ion-icon name="apps-outline" class="uil uil-apps"></ion-icon>
+
           </div>
         </div>
       </nav>
     </header>
     <!--========== main ========-->
-    <main class="'main">
+    <main class="main">
       <!-- =======home======-->
-      <secton class="home section" id="home">
+      <section class="home section" id="home">
         <div class="home__container container grid">
           <div class="home__content grid">
             <div class="home__social">
               <a
-                href="https://www.linkedin.com/"
+                href="https://www.linkedin.com"
                 target="_blank"
-                class="home__social icon"
+                class="home__social-icon"
               ></a>
               <i class="fi fi-brands-linkedin"></i>
               <a
-                href="https://dribble.com/"
+                href="https://www.dribbble.com"
                 target="_blank"
-                class="home__social icon"
+                class="home__social-icon"
               ></a>
-              <i class="fi fi-brands-dribble"></i>
+              <i class="fi fi-brands-dribbble"></i>
               <a
                 href="https://github.com"
                 target="_blank"
-                class="home__social icon"
+                class="home__social-icon"
               ></a>
               <i class="fi fi-brands-github"></i>
             </div>
-          </div>
-
-          <div class="home__img"></div>
-          <svg
+          <div class="home__img">
+           
+            <svg 
             class="home__blob"
-            viewBox="0 0 200 187"
-            xmlns="http://www.w3.org/2000/svg"
-            xmlns:xlink="http://www.w3.org/1999/xlink"
-          >
-            <mask id="mask0" mask-type="alpha">
-              <path
-                d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 165.547 
-                130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 129.362C2.45775 
-                97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 -0.149132 97.9666 
-                0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z"
-              />
-            </mask>
-            <g mask="url(#mask0)">
-              <path
-                d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 
-                165.547 130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 
-                129.362C2.45775 97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 
-                -0.149132 97.9666 0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z"
-              />
+            viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+              <path d="M38.2,-57.1C50.9,-51.4,63.5,-43.1,69.5,-31.3C75.5,-19.6,74.9,-4.5,68,6.3C61.1,17.1,47.8,23.5,38.4,31.9C29,40.2,23.4,50.5,14.8,55.3C6.1,60.1,-5.5,59.4,-16.3,56C-27.1,52.6,-37,46.6,-48.7,38.9C-60.4,31.3,-73.9,21.9,-80.6,8.5C-87.3,-4.9,-87.2,-22.3,-77.5,-32C-67.8,-41.8,-48.6,-43.8,-34.1,-48.6C-19.6,-53.5,-9.8,-61.3,1.5,-63.6C12.8,-65.9,25.6,-62.8,38.2,-57.1Z" transform="translate(100 100)" />
+         
               <image
-                href="img/perfil.png"
+                href="MyEmoji_.gif"
                 class="home__blob-img"
                 x="12"
                 y="18"
                 xlink:href="img/perfil.png"
               />
-            </g>
+          
           </svg>
-
+</div>
           <div class="home__data">
+
             <h1 class="home__title">Hi, I'am Raghad</h1>
             <h3 class="home__subtitle">Fronted devloper</h3>
             <p class="home__description">
               High level experience in web design and development
-              knowldge,producing quality work.
+              knowledge, producing quality work.
             </p>
-            <a href="" class="button button--flex"> Contact Me</a>
+          
+            <a href="#contact" class=button button--flex"> Contact Me</a>
+          </div>
           </div>
           <div class="home__scroll">
             <a href="#about" class="home__scroll-button button--flex">
+              <i class="uil uil-mouse-alt home__scroll-mouse"></i>
               <span class="home__scroll-name">Scroll down</span>
+              <i class="uil uil-arrow-down home__scroll-arrow"></i>
             </a>
           </div>
         </div>
@@ -142,13 +137,14 @@
       <!--==== about ======-->
       <section class="about section" id="about">
         <h2 class="section__title">About Me</h2>
-        <span class="section__subtitle">My introdction</span>
+        <span class="section__subtitle">My introduction</span>
 
         <div class="about__container container grid">
-          <img src="/img/about.jpg" alt="" class="about__img" />
+          <img src="MyEmoji_٢٠٢٥٠١٢٧_٢٢٠٨١٤_0.gif" alt="" class="about__img" width="300px" />
+        
           <div class="about__data">
-            <p class="about__descrption">
-              Web developer, with extensive knowledge and years of experiencem
+            <p class="about__description">
+              Web developer, with extensive knowledge and years of experience,
               working in web technologies and Ui / Ux design, delivering quality
               work
             </p>
@@ -156,21 +152,21 @@
               <div>
                 <span class="about__info-title">03+</span>
                 <span class="about__info-name"
-                  >Years <br />
+                  >Years <br>
                   experience</span
                 >
               </div>
               <div>
                 <span class="about__info-title">10+</span>
                 <span class="about__info-name"
-                  >Complated <br />
-                  projecte</span
+                  >Completed <br>
+                  project</span
                 >
               </div>
               <div>
                 <span class="about__info-title">02+</span>
                 <span class="about__info-name"
-                  >Copanies <br />
+                  >Companies <br>
                   worked</span
                 >
               </div>
@@ -182,12 +178,12 @@
                 class="button button--flex"
                 >download CV</a
               >
-              <ion-icon ios="heart-outline" md="heart-sharp" ></ion-icon>
+              <ion-icon ios="heart-outline" md="heart-sharp"></ion-icon>
             </div>
           </div>
         </div>
       </section>
-    </main>
+    
     <!--========== skills ========-->
     <section class="skills section" id="skills">
       <h2 class="section__title">Skills</h2>
@@ -198,94 +194,783 @@
           <!--skills 1-->
           <div class="skills__content skills__open">
             <div class="skills__header">
+              <ion-icon name="desktop-outline" class="skills__icon"></ion-icon> 
+              
               <div>
-                <h1 class="skills__title">Fronted developer</h1>
+                <h1 class="skills__title">Frontend developer</h1>
                 <span class="skills__subtitle">More than 4 years</span>
               </div>
-              <ion-icon name="chevron-down-outline" class="skills__arrow" size="small"></ion-icon>
+              
+              <ion-icon
+                name="chevron-down-outline"
+                class="skills__arrow"
+                size="small"
+              ></ion-icon>
             </div>
             <div class="skills__list grid">
-
-                <div class="skills__data">
-                  <div class="skills__titles">
-                    <h3 class="skills__name">HTML</h3>
-                    <span class="skills__number">90%</span>
-                  </div>
-                  <div class="skills__bar">
-                    <span class="skills__percentage skills__html"></span>
-                  </div>
-                  <div class="skills__data">
-                    <div class="skills__titles">
-                      <h3 class="skills__name">CSS</h3>
-                      <span class="skills__number">60%</span>
-                    </div>
-                    <div class="skills__bar">
-                      <span class="skills__percentage skills__css"></span>
-                    </div>
-                    <div class="skills__data">
-                      <div class="skills__titles">
-                        <h3 class="skills__name">JavaScript</h3>
-                        <span class="skills__number">90%</span>
-                      </div>
-                      <div class="skills__bar">
-                        <span class="skills__percentage skills__js"></span>
-                      </div>
+              <div class="skills__data">
+                <div class="skills__titles">
+                  <h3 class="skills_name">HTML</h3>
+                  <span class="skills__number">90%</span>
+                </div>
+                <div class="skills__bar">
+                  <span class="skills__percentage skills__html"></span>
+                </div>
+              </div>
+              <div class="skills__data">
+                <div class="skills__titles">
+                  <h3 class="skills_name">CSS</h3>
+                  <span class="skills__number">60%</span>
+                </div>
+                <div class="skills__bar">
+                  <span class="skills__percentage skills__css"></span>
+                </div>
+              </div>
+              <div class="skills__data">
+                <div class="skills__titles">
+                  <h3 class="skills_name">JavaScript</h3>
+                  <span class="skills__number">90%</span>
+                </div>
+                <div class="skills__bar">
+                  <span class="skills__percentage skills__js"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+         
+          <!--skills 2-->
+          <div class="skills__content skills__close">
+            <div class="skills__header">
+              <ion-icon name="server-outline" class="skills__icon"></ion-icon>
+              <div>
+                <h1 class="skills__title">Backend developer</h1>
+                <span class="skills__subtitle">More than 2 years</span>
+              </div>
+              <ion-icon
+                name="chevron-down-outline"
+                class="skills__arrow"
+                size="small"
+              ></ion-icon>
+            </div>
+            <div class="skills__list grid">
+            <div class="skills__data">
+              <div class="skills__titles">
+                <h3 class="skills_name">PHP</h3>
+                <span class="skills__number">50%</span>
+              </div>
+              <div class="skills__bar">
+                <span class="skills__percentage skills__php"></span>
+              </div>
+            </div>
+            <div class="skills__data">
+              <div class="skills__titles">
+                <h3 class="skills_name">Python</h3>
+                <span class="skills__number">70%</span>
               </div>
 
-              <!--skills 2-->
-              <div class="skills__content skills__close">
-                <div class="skills__header">
-                  <div>
-                    <h1 class="skills__title">Backend developer</h1>
-                    <span class="skills__subtitle">More than 2 years</span>
-                  </div>
-                  <ion-icon name="chevron-down-outline" class="skills__arrow" size="small"></ion-icon>
+              <div class="skills__bar">
+                <span class="skills__percentage skills__python"></span>
+              </div>
+            </div>
+            <div class="skills__data">
+              <div class="skills__titles">
+                <h3 class="skills_name">Flask</h3>
+                <span class="skills__number">60%</span>
+              </div>
+              <div class="skills__bar">
+                <span class="skills__percentage skills__flask"></span>
+              </div>
+            </div>
+            <div class="skills__data">
+              <div class="skills__titles">
+                <h3 class="skills_name">Asp.net</h3>
+                <span class="skills__number">50%</span>
+              </div>
+              <div class="skills__bar">
+                <span class="skills__percentage skills__asp"></span>
+              </div>
+              </div>
+            </div>
+          </div>
+       </div>
+
+     <div>
+           <!--skills 3-->
+           <div class="skills__content skills__close">
+          
+            <div class="skills__header">
+              <ion-icon name="stats-chart-outline" class="skills__icon"></ion-icon>
+
+              <div>
+               
+                <h1 class="skills__title">Analysis</h1> 
+            
+               <span class="skills__subtitle">More than 2 years</span>
+               </div>
+              <ion-icon
+                name="chevron-down-outline"
+                class="skills__arrow"
+                size="small"
+              ></ion-icon>
+            </div>
+            <div class="skills__list grid">
+              <div class="skills__data">
+                <div class="skills__titles">
+                  <h3 class="skills_name">Excel</h3>
+                  <span class="skills__number">90%</span>
                 </div>
-                
-                  <div class="skills__data"> 
-                    <div class="skills__titles">
-                      <h3 class="skills__name">PHP</h3>
-                      <span class="skills__number">50%</span>
-                    </div>
-                    <div class="skills__bar">
-                      <span class="skills__percentage skills__php"></span>
-                    </div>
-                    <div class="skills__data">
-                      <div class="skills__titles">
-                        <h3 class="skills__name">Python</h3>
-                        <span class="skills__number">70%</span>
-                      </div>
-                      <div class="skills__bar">
-                        <span class="skills__percentage skills__python"></span>
-                      </div>
-                      <div class="skills__data">
-                        <div class="skills__titles">
-                          <h3 class="skills__name">Flask</h3>
-                          <span class="skills__number">60%</span>
-                        </div>
-                        <div class="skills__bar">
-                          <span class="skills__percentage skills__flask"></span>
-                        </div>
-                        <div class="skills__data">
-                          <div class="skills__titles">
-                            <h3 class="skills__name">Asp.net</h3>
-                            <span class="skills__number">50%</span>
-                          </div>
-                          <div class="skills__bar">
-                            <span class="skills__percentage skills__asp"></span>
-                          </div>
-                  </div>
+                <div class="skills__bar">
+                  <span class="skills__percentage skills__html"></span>
+                </div>
+              </div>
+              <div class="skills__data">
+                <div class="skills__titles">
+                  <h3 class="skills_name">Design</h3>
+                  <span class="skills__number">60%</span>
+                </div>
+                <div class="skills__bar">
+                  <span class="skills__percentage skills__css"></span>
+                </div>
+              </div>
+              <div class="skills__data">
+                <div class="skills__titles">
+                  <h3 class="skills_name">UML</h3>
+                  <span class="skills__number">90%</span>
+                </div>
+                <div class="skills__bar">
+                  <span class="skills__percentage skills__js"></span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-
+      </div>
     </section>
-    <!--========== footer ========-->
 
-    <!--========== scroll top ========-->
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>  
+
+    <!-- qualification START -->
+        <section class="qualification section">
+          <h2 class="section__title"> Qualification</h2>
+          <span class="section__subtitle">My personal journey</span>
+          <div class="qualification__container container"> 
+        
+          <div class="qualification__tabs">
+            <div class="qualification__button button--flex qualification__active" data-target='#education'>
+             <ion-icon name="newspaper-outline" class="qualification__icon"></ion-icon> Education
+            </div>
+              <div class="qualification__button button--flex" data-target='#work'>
+             <ion-icon name="desktop-outline" class="qualification__icon"></ion-icon>Work
+            </div>
+          </div>
+          
+            
+             <div class="qualification__sections">
+               
+               <!-- === qualification content 1 === -->
+                 <div class="qualification__content qualification__active" data-content id="education">
+    <!-- === qualification content 1 === -->
+          
+      <!-- qualification 1 -->
+      <div class="qualification__data">
+            <div>
   
-  </body>
+       
+          <h3 class="qualification__title">Managemnt Information Systems</h3>
+          <span class="qualification__subtitle">Dammam - University </span>
+          <div class="qualification__calendar">
+            <ion-icon name="calendar-outline" class="uil-calendar-alt"></ion-icon>
+            2015 - 2019
+          </div>
+        </div> 
+        
+        <div>
+         <span class="qualification__rounder"></span>
+       <span class="qualification__line"></span>
+      </div>
+      </div>
+        
+           <!-- qualification 2 -->
+      <div class="qualification__data">
+        <div>
+          
+        </div>
+            <div>
+       <span class="qualification__rounder"></span>
+       <span class="qualification__line"></span>
+        </div>
+        <div>
+          <h3 class="qualification__title">work 1-2</h3>
+          <span class="qualification__subtitle">Peru - University</span>
+          <div class="qualification__calendar">
+            <ion-icon name="calendar-outline"></ion-icon>
+            2015 - 2019
+          </div>
+        </div>
+      </div>
+ 
+           <!-- qualification 3 -->
+      <div class="qualification__data">
+        <div>
+     
+          <h3 class="qualification__title">Computer Enginner 1-3</h3>
+          <span class="qualification__subtitle">Peru - University</span>
+          <div class="qualification__calendar">
+            <ion-icon name="calendar-outline"></ion-icon>
+            2009 - 2014
+          </div>
+        </div>
+        
+        <div>
+       <span class="qualification__rounder"></span>
+       <span class="qualification__line"></span>
+        </div>
+        
+      </div>
+        
+        
+           <!-- qualification 4 -->
+      <div class="qualification__data">
+        <div> </div>
+        <div>
+         <span class="qualification__rounder"></span>
+          <!--   <span class="qualification__line"></span> -->
+        </div>
+        
+        <div>
+          <h3 class="qualification__title">Software Enginner 1-4</h3>
+          <span class="qualification__subtitle">Peru - University</span>
+          <div class="qualification__calendar">
+            <ion-icon name="calendar-outline"></ion-icon>
+            2009 - 2014
+          </div>
+        </div>
+      </div>
+      </div>
+
+       <!-- qualification CONTENT 1 END XXX -->
+     
+      <!-- qualification content 2 START-->
+      <div class="qualification__content " data-content="" id="work">
+     
+        
+      <!-- qualification 1 -->
+        
+        
+     <div class="qualification__data">
+            <div>
+  
+       
+          <h3 class="qualification__title">Fronted Developer 2-1</h3>
+          <span class="qualification__subtitle">Peru - University</span>
+          <div class="qualification__calendar">
+            <ion-icon name="calendar-outline"></ion-icon>
+            2009 - 2014
+          </div>
+        </div> 
+        
+        <div>
+         <span class="qualification__rounder"></span>
+       <span class="qualification__line"></span>
+      </div>
+      </div>
+  <!-- qualification 2 -->
+      <div class="qualification__data">
+        <div>
+          
+        </div>
+            <div>
+       <span class="qualification__rounder"></span>
+       <span class="qualification__line"></span>
+        </div>
+        <div>
+          <h3 class="qualification__title">Web design 2-2</h3>
+          <span class="qualification__subtitle">Peru - University</span>
+          <div class="qualification__calendar">
+            <ion-icon name="calendar-outline"></ion-icon>
+            2015 - 2019
+          </div>
+        </div>
+      </div>
+ 
+           <!-- qualification 3 -->
+       <div class="qualification__data">
+        <div>
+     
+          <h3 class="qualification__title">Computer Enginner 3-2</h3>
+          <span class="qualification__subtitle">Peru - University</span>
+          <div class="qualification__calendar">
+            <ion-icon name="calendar-outline"></ion-icon>
+            2009 - 2014
+          </div>
+        </div>
+        
+        <div>
+       <span class="qualification__rounder"></span>
+       <span class="qualification__line"></span>
+        </div>
+        
+      </div>
+        
+           <!-- qualification 4 -->
+          <div class="qualification__data">
+        <div>
+          
+        </div>
+            <div>
+       <span class="qualification__rounder"></span>
+              <!--  <span class="qualification__line"></span>-->
+        </div>
+        <div>
+          <h3 class="qualification__title">Web design 4-2</h3>
+          <span class="qualification__subtitle">Peru - University</span>
+          <div class="qualification__calendar">
+            <ion-icon name="calendar-outline"></ion-icon>
+            2015 - 2019
+          </div>
+        </div>
+      </div>
+   
+<!-- qualification 4 X END. X -->
+ 
+      </div>
+    <!-- qualification CONTENT 2 X END X -->
+    </div>
+       <!-- qualification END X DIV SECTIONSS END. X    -->
+  </section>
+
+<!-- qualification END X  SECTIONS    -->
+
+<!-- ====  services ====-->
+
+<section class="services section" id="services">
+<h2 class="section__title">Services</h2>
+<span class="section__subtitle">What i offer </span>
+
+<div class="services__container container grid">
+<!-- ====  services 1 ===== -->
+<div class="services__content">
+<div>
+ 
+ <ion-icon name="apps" class="services__icon"></ion-icon>
+ <h3 class="services__title">UI/UX <br> Designer</h3>
+</div>
+<span class="button button--flex button--small button--link services__button">
+ View More <ion-icon name="arrow-forward"></ion-icon>
+</span>
+<div class="services__modal">
+<div class="services__modal-content">
+ <h4 class="services__modal-title"> Ui/Ux <br> Designer</h4>
+ <ion-icon name="close" class="services__modal-close"></ion-icon>
+ <ul class="services__modal-services grid">
+   <li class="services__modal-service">
+   <ion-icon name="checkmark-circle" class="services__icon"></ion-icon>
+   <p>I develop the user interface</p>
+   </li>
+   
+      <li class="services__modal-service">
+   <ion-icon name="checkmark-circle" class="services__icon""></ion-icon>
+   <p>Web page development</p>
+   </li>
+   
+      <li class="services__modal-service">
+   <ion-icon name="checkmark-circle" class="services__icon"></ion-icon>
+   <p>I Create ux element interactions</p>
+   </li>
+   
+   <li class="services__modal-service">
+    <ion-icon name="checkmark-circle" class="services__icon"></ion-icon>
+   <p>I position your company brand</p>
+   </li>
+   
+ </ul>
+</div>
+</div>
+</div>
+
+  <!-- ====  services 2 ===== -->
+<div class="services__content">
+<div>
+ 
+ <ion-icon name="code-slash" class="services__icon"></ion-icon>
+ <h3 class="services__title"> Frontend<br> Developer</h3>
+</div>
+<span class="button button--flex button--small button--link services__button">
+ View More <ion-icon name="arrow-forward"></ion-icon>
+</span>
+<div class="services__modal">
+<div class="services__modal-content">
+ <h4 class="services__modal-title"> Frontend<br> Developer</h4>
+ <ion-icon name="close" class="services__modal-close"></ion-icon>
+ <ul class="services__modal-services grid">
+   <li class="services__modal-service">
+   <ion-icon name="checkmark-circle" class="services__icon"></ion-icon>
+   <p>I develop the user interface</p>
+   </li>
+   
+      <li class="services__modal-service">
+   <ion-icon name="checkmark-circle" class="services__icon"></ion-icon>
+   <p>Web page development</p>
+   </li>
+   
+      <li class="services__modal-service">
+   <ion-icon name="checkmark-circle" class="services__icon"></ion-icon>
+   <p>I Create ux element interactions</p>
+   </li>
+   
+      <li class="services__modal-service">
+   <ion-icon name="checkmark-circle" class="services__icon"></ion-icon>
+   <p>I position your company brand</p>
+   </li>
+   
+ </ul>
+</div>
+</div>
+</div>
+
+  <!-- ====  services 3 ===== -->
+<div class="services__content">
+<div>
+ 
+ <ion-icon name="pencil" class="services__icon"class="services__icon"></ion-icon>
+ <h3 class="services__title">Branding <br> Designer</h3>
+</div>
+<span class="button button--flex button--small button--link services__button">
+ View More <ion-icon name="arrow-forward"></ion-icon>
+</span>
+<div class="services__modal">
+<div class="services__modal-content">
+ <h4 class="services__modal-title"> Branding <br> Designer</h4>
+ <ion-icon name="close" class="services__modal-close"></ion-icon>
+ <ul class="services__modal-services grid">
+   <li class="services__modal-service">
+   <ion-icon name="checkmark-circle" class="services__icon"></ion-icon>
+   <p>I develop the user interface</p>
+   </li>
+   
+      <li class="services__modal-service">
+   <ion-icon name="checkmark-circle" class="services__icon"></ion-icon>
+   <p>Web page development</p>
+   </li>
+   
+      <li class="services__modal-service">
+   <ion-icon name="checkmark-circle" class="services__icon"></ion-icon>
+   <p>I Create ux element interactions</p>
+   </li>
+   
+      <li class="services__modal-service">
+   <ion-icon name="checkmark-circle" class="services__icon"></ion-icon>
+   <p>I position your company brand</p>
+   </li>
+   
+ </ul>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!--========== POR TFO LIO ========-->
+<section class="portfolio section" id="portfolio">
+<h2 class="section__title">Portfolio</h2>
+<span class="section__subtitle">Most recent work</span>
+
+<div class="portfolio__container container swiper-container  swiper-container-initialized swiper-container-horizontal swiper-container-pointer-events swiper-container-css-mode">
+<div class="swiper-wrapper" id="swiper-wrapper-41d7662a2be457b2" aria-live="polite">
+ 
+ <!-- portfolio 1 -->
+ <div class="portfolio__content grid swiper-slide swiper-slide-duplicate swiper-slide-prev" data-swiper-slide-index="2" style="width: 478px;" role="group" aria-label="1 / 5">
+   <img src="img/portfolio1.jpg" alt="Project picture" class="portfolio__img">  
+    <div class="portfolio__data">
+     <h3 class="portfolio__title">Modern website</h3>
+     <p class="portfolio__description">Website adaptable to all devices, with ui component and animated interactions.</p>
+     
+     <a href="#" class="button button--flex button--small portfolio__button">
+       Demo
+       <ion-icon name="arrow-forward" class="button__icon"></ion-icon>
+     </a>
+   </div>
+ </div>
+ <!-- portolio 1 end X -->
+ 
+    <!-- portfolio 2 -->
+ <div class="portfolio__content grid swiper-slide">
+   <img src="img/portfolio2.jpg" alt="Project picture" class="portfolio__img">
+   
+   <div class="portfolio__data">
+     <h3 class="portfolio__title">Brand design </h3>
+     <p class="portfolio__description">Website adaptable to all devices, with ui component and animated interactions.</p>
+     
+     <a href="#" class="button button--flex button--small portfolio__button">
+       Demo
+       <ion-icon name="arrow-forward" class="button__icon"></ion-icon>
+     </a>
+   </div>
+ </div>
+ <!-- portolio 2 end X -->
+ 
+    <!-- portfolio 3 -->
+ <div class="portfolio__content grid swiper-slide">
+   <img src="img/portfolio3.jpg" alt="Project picture" class="portfolio__img">
+   
+   <div class="portfolio__data">
+     <h3 class="portfolio__title">Online store</h3>
+     <p class="portfolio__description">Website adaptable to all devices, with ui component and animated interactions.</p>
+     
+     <a href="#" class="button button--flex button--small portfolio__button">
+       Demo
+       <ion-icon name="arrow-forward" class="button__icon"></ion-icon>
+      </a>
+    </div>
+  </div>
+ <!-- portolio 3 end X -->
+ </div>
+ 
+<!--==Add arrows ==-->
+<div class="swiper-button-next">
+  <!-- <i class="uil uil-angle-right-b swiper-portfolio-icon"></i><i class="uil uil-angle-right-b swiper-portfolio-icon"></i> -->
+  <i class="uil uil-angle-right-b swiper-portfolio-icon"></i>
+  <!-- <ion-icon name="chevron-back-outline" class="uil uil-angle-right-b swiper-portfolio-icon"></ion-icon> -->
+  <!--class="swiper-portfolio-icon"-->
+</div>
+<div class="swiper-button-prev">
+  <!-- <ion-icon name="chevron-forward-outline"class='swiper-portfolio-icon' ></ion-icon> -->
+  <i class="uil uil-angle-left-b swiper-portfolio-icon"></i>
+  <!--class="swiper-portfolio-icon"-->
+</div>
+<!--== Add pagination ==-->
+  
+<div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullet"></div>
+
+</div>
+</section>
+
+
+<!--========== PORJECT IN MIND ========-->
+<section class="project section">
+  <div class="project__bg">
+    <div class="project__container container grid">
+      <div class="project__data">
+        <h2 class="project__title"> You have a new project</h2>
+        <p class="project__description">Contact me now and get a 30% discount on your new project.</p>
+        <a href="#contact" class="button button--flex button--white">
+          Contact Me
+          <ion-icon name="send" class="project__icon button__icon"></ion-icon>
+        </a>
+      </div>
+<img src="img/project.png" alt="" class="project__img">
+    </div>
+  </div>
+</section>
+<!--========== TESTIMONIAL ========-->
+
+<section class="testimonial section">
+  <h2 class="section__title">Testimonial</h2>
+  <span class="section__subtitle">My client saing</span>
+
+  <div class="testimonial__container container swiper-container">
+    <div class="swiper-wrapper">
+      <!--========== TESTIMONIAL 1 ========-->
+      <div class="testimonial__content swiper-slide">
+        <div class="testimonial__data">
+          <div class="testimonial__header">
+          <img src="img/testimonial1.jpg" alt="" class="testimonial__img">
+          <div>
+
+            <h3 class="testimonial__name">Sara Smith</h3>
+            <span class="testimonial__client"> Client</span>
+          </div>
+          </div>
+          <div>
+            <ion-icon name="star" class="testimonial__icon-star"></ion-icon>
+            <ion-icon name="star" class="testimonial__icon-star"></ion-icon>
+            <ion-icon name="star" class="testimonial__icon-star"></ion-icon>
+            <ion-icon name="star" class="testimonial__icon-star"></ion-icon>
+            <ion-icon name="star" class="testimonial__icon-star"></ion-icon>
+          </div>
+        </div>
+
+        <p class="testimonial__description">I got a good impression,
+          I carry but my project with all the possible quality and attention and
+           support 24 hours a day.
+          
+          </p>
+      </div> 
+ <!--========== TESTIMONIAL 1 X END X ========-->
+
+  <!--========== TESTIMONIAL 2 ========-->
+      <div class="testimonial__content swiper-slide">
+        <div class="testimonial__data">
+          <div class="testimonial__header">
+          <img src="img/testimonial3.jpg" alt="" class="testimonial__img">
+          <div>
+
+            <h3 class="testimonial__name">Sara Smith</h3>
+            <span class="testimonial__client"> Client</span>
+          </div>
+          </div>
+          <div>
+            <ion-icon name="star" class="testimonial__icon-star"></ion-icon>
+            <ion-icon name="star" class="testimonial__icon-star"></ion-icon>
+            <ion-icon name="star" class="testimonial__icon-star"></ion-icon>
+            <ion-icon name="star" class="testimonial__icon-star"></ion-icon>
+            <ion-icon name="star" class="testimonial__icon-star"></ion-icon>
+          </div>
+        </div>
+
+        <p class="testimonial__description">I got a good impression,
+          I carry but my project with all the possible quality and attention and
+           support 24 hours a day.
+          
+          </p>
+      </div>
+
+      <!--========== TESTIMONIAL X 2 END X ========-->
+      <!--========== TESTIMONIAL 3 ========-->
+      <div class="testimonial__content swiper-slide">
+        <div class="testimonial__data">
+          <div class="testimonial__header">
+          <img src="img/testimonial1.jpg" alt="" class="testimonial__img">
+          <div>
+
+            <h3 class="testimonial__name">Sara Smith</h3>
+            <span class="testimonial__client"> Client</span>
+          </div>
+          </div>
+          <div>
+            <ion-icon name="star" class="testimonial__icon-star"></ion-icon>
+            <ion-icon name="star" class="testimonial__icon-star"></ion-icon>
+            <ion-icon name="star" class="testimonial__icon-star"></ion-icon>
+            <ion-icon name="star" class="testimonial__icon-star"></ion-icon>
+            <ion-icon name="star" class="testimonial__icon-star"></ion-icon>
+          </div>
+        </div>
+
+        <p class="testimonial__description">I got a good impression,
+          I carry but my project with all the possible quality and attention and
+           support 24 hours a day.
+          
+          </p>
+      </div> 
+ <!--========== TESTIMONIAL 3 X END X ========-->
+
+
+    </div>
+    <!-- add Pagination-->
+    <div class="swiper-paginaton swiper-pagination-testimonial"></div>
+  </div>
+</section>
+
+<!--========== CONTACT ME ========-->
+<section class="contact section" id="contact">
+  <h2 class="section__title"> Contact Me</h2>
+  <span class="section__subtitle">Get in touch</span>
+  <div class="contact__container container grid">
+    <div>
+      <div class="contact__information">
+        <ion-icon name="call" class="contact__icon"></ion-icon>
+        <div>
+          <h3 class="contact__title">Call Me</h3>
+          <span class="contact__subtitle">999-000-888</span>
+        </div>
+      </div>
+
+      <div class="contact__information">
+        <ion-icon name="location" class="contact__icon"></ion-icon>
+        <div>
+          <h3 class="contact__title">Location</h3>
+          <span class="contact__subtitle">KSA - Jeddah</span>
+        </div>
+      </div>
+
+      <div class="contact__information">
+        <ion-icon name="mail" class="contact__icon"></ion-icon>
+        <div>
+          <label class="contact__title">Email</label>
+          <span class="contact__subtitle">aaa@hotmail.com</span>
+        </div>
+      </div>
+
+    </div>
+
+    <form action="" class="contact__form grid">
+      <div class="contact__inputs grid">
+        <div class="contact__content">
+                    
+          <label for="" class="contact__label">Name</label>
+          <input type="text" class="contact__input">
+         </div>
+
+         <div class="contact__content">
+
+          <label for="" class="contact__label">Email</label>
+          <input type="email" class="contact__input">
+         </div>
+
+     
+        <div class="contact__content">
+
+        <label for="" class="contact__label">Massage</label>
+        <textarea name="" id="" cols="0" rows="7" class="contact__input"></textarea>
+        </div>
+        <div>
+          <a href="#" class="button button--fle">
+           Send Message
+            <ion-icon name="send" class="button__icon"></ion-icon>
+          </a>
+        </div>
+
+    </form>
+  </div>
+</section>
+</main>
+
+<!--========== Footer ========-->
+<footer class="footer">
+  <div class="footer__bg">
+    <div class="footer__container container grid">
+      <div>
+        <h1 class="footer__title">Raghad</h1>
+        <span class="footer__subtitle">FrontEnd developer</span>
+      </div>
+      <ul class="footer__links">
+        <li>
+          <a href="#services" class="footer__link">Services</a>
+        </li>
+        <li>
+          <a href="#portfolio" class="footer__link">Portfolio</a>
+        </li>
+        <li>
+          <a href="#contact" class="footer__link">Contact me</a>
+        </li>
+      </ul>
+
+      <div class="footer__socials">
+        <a href="https://www.twitter.com" target="_blank" class="footer__social"><ion-icon name="logo-twitter" class="footer__icon"></ion-icon></a>
+        <a href="https://www.linkedin.com" target="_blank" class="footer__social"><ion-icon name="logo-linkedin" class="footer__icon"></ion-icon></a>
+        <a href="https://www.tiktok.com" target="_blank" class="footer__social"><ion-icon name="logo-tiktok" class="footer__icon"></ion-icon></a>
+      </div>
+
+    </div>
+    <p class="footer__copy">&#169; Bedimcode. All right reserved</p>
+  </div>
+</footer>
+
+  <!--========== SWIPER JS ========-->
+  <script src="js/swiper-bundle.min.js"></script>
+    <!--========== scroll top ========-->
+<a href="#" class="scrollup" id="scroll-up">
+  <ion-icon name="chevron-up" class="scrollup__icon"></ion-icon>
+</a>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+ 
   <script src="js/script2.js"></script>
+   </body>
 </html>
