@@ -9,7 +9,7 @@
   /*======= colors ==========*/
   /*  change favorite color  */
 
-  --hue-color: 900; /* purple 250 - green 142 - blue 230 - pink 340 */
+  --hue-color: 340; /* purple 250 - green 142 - blue 230 - pink 340 */
 
   /* HSL color mode */
   --first-color: hsl(var(--hue-color), 69%, 61%);
@@ -96,12 +96,17 @@ body.dark-theme {
 .change-theme:hover {
   color: var(--first-color);
 }
-.sunny-outline:before {
-  content: "\e9cc";
+
+/* تطبيق الانتقال التدريجي على كل شيء داخل الصفحة */
+body {
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
-.moon-outline:before {
-  content: "\ea8b";
+
+/* يمكنكِ إضافة transition لعناصر أخرى أيضًا حسب التصميم */
+.change-theme {
+  transition: color 0.3s ease;
 }
+
 /* base */
 * {
   box-sizing: border-box;

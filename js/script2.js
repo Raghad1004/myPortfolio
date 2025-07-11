@@ -8,6 +8,8 @@ const navClose = document.getElementById("nav-close");
 if (navToggle) {
   navToggle.addEventListener("click", () => {
     navMenu.classList.add("show-menu");
+    navToggle.style.display = "none";
+    navClose.style.display = "block";
   });
 }
 //menu hidden
@@ -15,6 +17,8 @@ if (navToggle) {
 if (navClose) {
   navClose.addEventListener("click", () => {
     navMenu.classList.remove("show-menu");
+    navToggle.style.display = "block";
+    navClose.style.display = "none";
   });
 }
 // ===== remove menu mobile  =====
@@ -88,6 +92,7 @@ modalCloses.forEach((modalClose, index) => {
 });
 
 // ====== POR TFO LIO SWIPER ======
+/*
 let swiperPortfolio = new Swiper(".portfolio__container", {
   cssMode: true,
   loop: true,
@@ -105,6 +110,7 @@ let swiperPortfolio = new Swiper(".portfolio__container", {
 });
 
 // ==== TESTIMONIAL ====
+
 let swiperTestimonial = new Swiper(".testimonial__container", {
   loop: true,
   grabCursor: true,
@@ -123,6 +129,7 @@ let swiperTestimonial = new Swiper(".testimonial__container", {
   // mousewheel: true,
   // keyboard: true,
 });
+*/
 /* === SCROLL SECTIONs ACTIVE LINK === */
 const sections = document.querySelectorAll("section[id]");
 
@@ -136,11 +143,11 @@ function scrollActive() {
 
     if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
       document
-        .querySelector(".nav__menu a[href*=" + sectionId + "]")
+        .querySelector(".nav__menu a[href*=' + sectionId + ']")
         .classList.add("active-link");
     } else {
       document
-        .querySelector(".nav__menu a[href*=" + sectionId + "]")
+        .querySelector(".nav__menu a[href*=' + sectionId + ']")
         .classList.remove("active-link");
     }
   });
@@ -165,36 +172,45 @@ function scrollUp() {
   else scrollUp.classList.remove("show-scroll");
 }
 window.addEventListener("scroll", scrollUp);
-/*=====  DARK LIGHT THEME   =====*/
+
 const themeButton = document.getElementById("theme-button");
 const darkTheme = "dark-theme";
-const iconTheme = "sunny-outline";
 
-// perviously seleced topic ( if user selected)
+// أسماء الأيقونات التي ستظهر
+const iconLight = "sunny-outline"; // يظهر عندما يكون الوضع داكن (للتبديل للمضيء)
+const iconDark = "moon-outline"; // يظهر عندما يكون الوضع مضيء (للتبديل للداكن)
+
+// جلب القيم المخزنة سابقًا
 const selectedTheme = localStorage.getItem("selected-theme");
 const selectedIcon = localStorage.getItem("selected-icon");
-// we obtain the current theme that the interface has by valid
+
+// دالة لتحديد الثيم الحالي
 const getCurrentTheme = () =>
   document.body.classList.contains(darkTheme) ? "dark" : "light";
-const getCurrentIcon = () =>
-  themeButton.classList.contains(iconTheme) ? "moon-outline" : "sunny-outline";
 
-//we validate if the user previously chose a topic
+// دالة لجلب اسم الأيقونة الحالية
+const getCurrentIcon = () => themeButton.getAttribute("name");
+
+// تطبيق الثيم المحفوظ إذا وُجد
 if (selectedTheme) {
-  //if the validation is fulfilled, we ask what the issue was to know if we active
   document.body.classList[selectedTheme === "dark" ? "add" : "remove"](
     darkTheme
   );
-  themeButton.classList[selectedIcon === "moon-outline" ? "add" : "remove"](
-    iconTheme
-  );
+  themeButton.setAttribute("name", selectedIcon);
 }
-// active / deactive the theme manually with the button
+
+// عند الضغط على زر التبديل
 themeButton.addEventListener("click", () => {
-  // Add or remove the dark / icon theme
   document.body.classList.toggle(darkTheme);
-  themeButton.classList.toggle(iconTheme);
-  // We save the theme and the current icon that the user chose
+
+  // نبدل بين اسم الأيقونة
+  const currentIcon = themeButton.getAttribute("name");
+  themeButton.setAttribute(
+    "name",
+    currentIcon === iconLight ? iconDark : iconLight
+  );
+
+  // حفظ القيم
   localStorage.setItem("selected-theme", getCurrentTheme());
   localStorage.setItem("selected-icon", getCurrentIcon());
 });
